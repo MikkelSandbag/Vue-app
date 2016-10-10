@@ -1,0 +1,252 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/********** Main Styles **********/
+/* line 9, ../sass/screen.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f1f2f2;
+  max-width: 1024px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* line 19, ../sass/screen.scss */
+.addInterfaceWrapper {
+  border: 1px solid #d1d1d1;
+  border-bottom-width: 3px;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 25px;
+  margin: 25px auto;
+  width: calc(100% - 50px);
+  box-sizing: border-box;
+}
+
+/* line 30, ../sass/screen.scss */
+.addInterface {
+  overflow: hidden;
+}
+/* line 33, ../sass/screen.scss */
+.addInterface > * {
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 1rem;
+  border: 0;
+  background: transparent;
+  padding: 5px;
+  display: block;
+  box-sizing: border-box;
+}
+/* line 43, ../sass/screen.scss */
+.addInterface > *:focus {
+  outline: none;
+}
+/* line 48, ../sass/screen.scss */
+.addInterface input {
+  border-bottom: 1px solid #d1d1d1;
+  width: calc(100% / 3 - 25px);
+  float: left;
+  clear: left;
+}
+/* line 54, ../sass/screen.scss */
+.addInterface input:not(:first-child) {
+  margin-top: 5px;
+}
+/* line 59, ../sass/screen.scss */
+.addInterface textarea {
+  border: 1px solid #d1d1d1;
+  margin-left: calc(100% / 3 + 5px);
+  width: calc(100% / 3 * 2 - 5px);
+  height: 199px;
+  resize: none;
+}
+/* line 67, ../sass/screen.scss */
+.addInterface button {
+  color: #fff;
+  background-color: #67e467;
+  border-radius: 3px;
+  padding: 0 25px;
+  margin-top: 20px;
+  height: 35px;
+  float: left;
+  clear: left;
+  cursor: pointer;
+}
+
+/* line 80, ../sass/screen.scss */
+h1 {
+  font-size: 2rem;
+  padding: 0 25px;
+  margin-bottom: 15px;
+}
+
+/* line 86, ../sass/screen.scss */
+.listMembers {
+  padding: 0 15px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+/* line 92, ../sass/screen.scss */
+.listMembers .memberCard {
+  flex: 0 0 calc(100% / 3 - 20px);
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  border-bottom-width: 3px;
+  border-radius: 3px;
+  padding: 25px;
+  margin: 0 10px 20px;
+  width: calc(100% / 3 - 20px);
+  position: relative;
+  box-sizing: border-box;
+}
+/* line 104, ../sass/screen.scss */
+.listMembers .memberCard .removeButton {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  color: #777;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  transform: rotate(45deg);
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+/* line 122, ../sass/screen.scss */
+.listMembers .memberCard .removeButton:hover {
+  color: #222;
+}
+/* line 127, ../sass/screen.scss */
+.listMembers .memberCard:hover .removeButton {
+  visibility: visible;
+  opacity: 1;
+}
+/* line 132, ../sass/screen.scss */
+.listMembers .memberCard .headingWrapper {
+  overflow: hidden;
+}
+/* line 135, ../sass/screen.scss */
+.listMembers .memberCard .headingWrapper .firstName:not(.empty) + .lastName:before {
+  content: ' ';
+}
+/* line 139, ../sass/screen.scss */
+.listMembers .memberCard .headingWrapper .city:not(.empty) + .state:before {
+  content: ', ';
+}
+/* line 143, ../sass/screen.scss */
+.listMembers .memberCard .headingWrapper .url {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 149, ../sass/screen.scss */
+.listMembers .memberCard .avatarWrapper {
+  width: 66px;
+  height: 66px;
+  border-radius: 100%;
+  margin-right: 10px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  box-sizing: border-box;
+}
+/* line 159, ../sass/screen.scss */
+.listMembers .memberCard .avatarWrapper img {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 167, ../sass/screen.scss */
+.listMembers .memberCard .avatarWrapper ~ * {
+  line-height: normal;
+  width: calc(100% - 76px);
+  float: right;
+}
+/* line 174, ../sass/screen.scss */
+.listMembers .memberCard .description {
+  line-height: normal;
+  margin-top: 15px;
+  clear: left;
+}
+/* line 179, ../sass/screen.scss */
+.listMembers .memberCard .description:empty {
+  margin-top: 0;
+}

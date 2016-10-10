@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <title>Member List</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/screen.css">
+</head>
+<body>
+    <div id="app">    
+    	<div class="addInterfaceWrapper">
+    		<form class="addInterface" v-on:submit.prevent>
+				<input id="firstNameInput" v-model="newUser.firstName" type="text" placeholder="First Name">
+				<input id="lastNameInput" v-model="newUser.lastName" type="text" placeholder="Last Name">
+				<input id="cityInput" v-model="newUser.city" type="text" placeholder="City">
+				<input id="stateInput" v-model="newUser.state" type="text" placeholder="State">
+				<input id="urlInput" v-model="newUser.url" type="text" placeholder="URL">
+				<input id="avatarInput" v-model="newUser.avatar" type="text" placeholder="Avatar URL">
+				<textarea id="descriptionInput" v-model="newUser.description" name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
+				<button type="submit" v-on:click="addMember">Submit</button>
+				<button type="submit" v-on:click="addRandomMember">Random!</button>
+			</form>
+    	</div>
+    	
+    	<h1>Member list</h1>
+
+		<div class="listMembers" id="listMembers">
+			<template v-for="(user, index) in users">
+				<div class="memberCard" v-bind="{id: 'member-' + user.id}">
+					<div class="removeButton" v-on:click="removeMember(index)">+</div>
+					<div class="headingWrapper">
+						<div class="avatarWrapper">
+							<img v-bind:src="user.avatar" v-bind="{alt: 'profile-' + user.id}">
+						</div>
+						<h2 class="name"><span v-bind:class="{empty: isEmpty(user.firstName)}" class="firstName">{{ user.firstName }}</span><span class="lastName">{{ user.lastName }}</span></h2>
+						<p class="location"><span v-bind:class="{empty: isEmpty(user.city)}" class="city">{{ user.city }}</span><span class="state">{{ user.state }}</span></p>
+						<p class="url"><a v-bind:href="user.url" target="_blank">{{ user.url }}</a></p>
+						</div>
+					<p class="description">{{ user.description }}</p>
+				</div>
+			</template>
+		</div>
+    </div>
+    
+    <script src="js/vue.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
