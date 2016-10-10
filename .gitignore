@@ -39,3 +39,6 @@ Thumbs.db
 # Sass #
 .sass-cache/
 *.css.map
+
+# Other #
+config.rb
