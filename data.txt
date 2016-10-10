@@ -1,5 +1,0 @@
-profile pic
-name
-location
-url
-description
